@@ -31,3 +31,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/pisgat-hafakot
+
+# This blank line/comment is added to trigger GitHub Actions
