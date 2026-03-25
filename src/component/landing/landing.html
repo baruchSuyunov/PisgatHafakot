@@ -1,0 +1,144 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <h1 class="animate delay-1">
+      צילום ואטרקציות לאירועים – פסגת ההפקות
+    </h1>
+
+    <p class="animate delay-2">
+
+      צילום מקצועי לאירועים משפחתיים ופרטיים<br />
+      בר מצווה • חלאקה • חינה • אירועים מיוחדים<br />
+      כולל אטרקציות: מגנטים | סלואו | רחפן | עמדות צילום
+    </p>
+
+    <p class="service-area animate delay-3">
+      נותן שירות בירושלים, המרכז והסביבה
+    </p>
+
+    <a [href]="whatsappLink" target="_blank" class="cta animate delay-4" aria-label="יצירת קשר בוואטסאפ">
+      📲 להצעת מחיר מהירה ב-WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="container">
+    <h2>למה לבחור בפסגת ההפקות?</h2>
+
+    <ul class="why-list">
+      <li>✔ ניסיון עשיר בצילום אירועים משפחתיים</li>
+      <li>✔ חבילות צילום ואטרקציות במחיר משתלם</li>
+      <li>✔ ציוד מתקדם ותוצאה ברמה גבוהה</li>
+      <li>✔ יחס אישי, זמינות גבוהה וליווי מלא</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <div class="container">
+    <h2>תיק עבודות – צילום ואטרקציות לאירועים</h2>
+
+    <div class="categories">
+      <button *ngFor="let cat of categories" (click)="setCategory(cat)" [class.active]="selectedCategory === cat">
+        {{ cat }}
+      </button>
+    </div>
+  </div>
+
+  <div class="gallery-wrapper">
+    <button class="scroll-btn left" (click)="scrollGallery(-1)" aria-label="גלילה שמאלה">‹</button>
+
+    <div class="gallery" #gallery>
+      <img *ngFor="let img of filteredImages" [src]="img.src" [alt]="'צילום אירועים – ' + img.category"
+        class="gallery-img" loading="lazy" />
+    </div>
+
+    <button class="scroll-btn right" (click)="scrollGallery(1)" aria-label="גלילה ימינה">›</button>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2>מה הלקוחות שלנו אומרים</h2>
+
+    <div class="testimonial-list">
+      <div class="testimonial" *ngFor="let review of reviews">
+        <img [src]="review.photo" [alt]="'תמונה של ' + review.name" class="testimonial-photo" loading="lazy" />
+        <div class="testimonial-text">
+          <p>{{ review.text }}</p>
+          <span class="reviewer-name">— {{ review.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PACKAGES -->
+<section class="packages">
+  <div class="container">
+    <h2>חבילות צילום ואטרקציות</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>חבילת צילום מלאה</h3>
+        <p>
+          צלם מקצועי • עריכה מתקדמת • אלבום דיגיטלי<br />
+          מתאים לאירועים בירושלים והמרכז
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>צילום + מגנטים</h3>
+        <p>
+          מגנטים ללא הגבלה • הדפסה במקום<br />
+          איכות גבוהה ועמידות לאורך זמן
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>צילום + אטרקציות</h3>
+        <p>
+          בלוקים • סלואו • רחפן • עמדות צילום<br />
+          חוויה שמרימה את האירוע
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-me">
+  <div class="container about-grid">
+    <img src="assets/baruch.JPG" alt="ברוך סויונוב – צלם אירועים ואטרקציות" class="my-photo" loading="lazy" />
+
+    <div>
+      <h2>קצת עליי</h2>
+      <p>
+        אני ברוך סויונוב, צלם אירועים עם ניסיון עשיר בצילום
+        רגעים אמיתיים, מרגשים ובלתי נשכחים.
+        משלב צילום מקצועי עם אטרקציות לאירועים,
+        תוך הקפדה על יחס אישי, זמינות גבוהה ותוצאה שמכבדת את הרגע.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>מחפשים צלם ואטרקציות לאירוע שלכם?</h2>
+
+    <p>
+      שירות מקצועי • ניסיון • הגעה עד אליכם<br />
+      ירושלים | מרכז | סביבה
+    </p>
+
+    <a [href]="whatsappLink" target="_blank" class="cta big" aria-label="פנייה בוואטסאפ">
+      📸 דברו איתי עכשיו
+    </a>
+  </div>
+</section>
