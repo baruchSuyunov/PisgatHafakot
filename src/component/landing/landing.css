@@ -36,7 +36,7 @@ h3 {
 
 /* ===== HERO ===== */
 .hero {
-  background-image: url('/PisgatHafakot/src/assets/pic_General.JPG');
+  background-image: url('/assets/pic_General.JPG');
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -174,7 +174,7 @@ h3 {
 .card:hover {
   transform: translateY(-5px);
   transition: 0.3s;
-} 
+}
 
 /* ===== ABOUT ===== */
 .about-grid {
