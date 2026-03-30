@@ -36,7 +36,7 @@ h3 {
 
 /* ===== HERO ===== */
 .hero {
-  background-image: url('assets/pic_General.jpg');
+  background-image: url('/PisgatHafakot/src/assets/pic_General.JPG');
   background-size: cover;
   background-position: center;
   height: 90vh;
