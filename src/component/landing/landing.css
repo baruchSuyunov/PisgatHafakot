@@ -36,11 +36,15 @@ h3 {
 
 /* ===== HERO ===== */
 .hero {
-  /* max-height: 19vh;*/
-  background: linear-gradient(to bottom, #000, #222);
-  color: #fff;
+  background-image: url('/assets/pic_General.png');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
 .hero-content {
@@ -166,6 +170,11 @@ h3 {
   border-radius: 18px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+} 
 
 /* ===== ABOUT ===== */
 .about-grid {

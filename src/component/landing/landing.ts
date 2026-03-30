@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { Component, ViewChild, ElementRef,HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class Landing {
 
   @HostListener('window:scroll', ['$event'])
 
-  categories = ['חתונות', 'בר/ת מצווה', 'ברית/ה'];
+  categories = ['חתונות', 'בר/ת מצווה', 'ברית/ה', 'אטרקציות'];
 
   portfolioImages = [
     // ... תמונות לחתונה
@@ -73,30 +73,38 @@ export class Landing {
     { src: 'assets/Brit_r/brit_11.jpg', category: 'ברית/ה' },
     { src: 'assets/Brit_r/brit_12.jpg', category: 'ברית/ה' },
     { src: 'assets/Brit_r/brit_13.jpg', category: 'ברית/ה' },
+
+    //אטרקציות 
+    { src: 'assets/Attractions/attr_1.jpg', category: 'אטרקציות' },
+    { src: 'assets/Attractions/attr_2.jpg', category: 'אטרקציות' },
+    { src: 'assets/Attractions/attr_3.jpg', category: 'אטרקציות' },
+    { src: 'assets/Attractions/attr_4.jpg', category: 'אטרקציות' },
+    { src: 'assets/Attractions/attr_5.jpg', category: 'אטרקציות' },
+    { src: 'assets/Attractions/attr_6.jpg', category: 'אטרקציות' },   
   ];
 
-reviews = [
-  {
-    photo: 'assets/Hamlatzot/hamlatza_1.JPG',
-    text: 'תודה ברוך אתה המלך שלנו שבעזרת ה לכל אירוע את תהיה אצלנו. אתה תותח אמיתי באמת שיצא מושלם.',
-    name: 'יקיר עזרא'
-  },
-  {
-    photo: 'assets/Hamlatzot/hamlatza_2.JPG',
-    text: 'ברוך מה נשמע? רצינו להודות לך על אתמול היה מהמם! לגבי הבלוקים תעדכן מתי אפשר לבחור תמונות.',
-    name: 'בתאל אזולאי'
-  },
-  {
-    photo: 'assets/Hamlatzot/hamlatza_3.JPG',
-    text: 'אין עליך ברוך היקר תודההההה ❤️❤️',
-    name: 'מיכל שם טוב.'
-  },
-  {
-    photo: 'assets/Hamlatzot/hamlatza_4.JPG',
-    text: 'וואו ברוך מושלם מושלם תודה רבה רבה יצא מהמם באמת כל הכבוד לך מהמם',
-    name: 'ישראל תמיר'
-  }
-];
+  reviews = [
+    {
+      photo: 'assets/Hamlatzot/hamlatza_1.JPG',
+      text: 'תודה ברוך אתה המלך שלנו שבעזרת ה לכל אירוע את תהיה אצלנו. אתה תותח אמיתי באמת שיצא מושלם.',
+      name: 'יקיר עזרא'
+    },
+    {
+      photo: 'assets/Hamlatzot/hamlatza_2.JPG',
+      text: 'ברוך מה נשמע? רצינו להודות לך על אתמול היה מהמם! לגבי הבלוקים תעדכן מתי אפשר לבחור תמונות.',
+      name: 'בתאל אזולאי'
+    },
+    {
+      photo: 'assets/Hamlatzot/hamlatza_3.JPG',
+      text: 'אין עליך ברוך היקר תודההההה ❤️❤️',
+      name: 'מיכל שם טוב.'
+    },
+    {
+      photo: 'assets/Hamlatzot/hamlatza_4.JPG',
+      text: 'וואו ברוך מושלם מושלם תודה רבה רבה יצא מהמם באמת כל הכבוד לך מהמם',
+      name: 'ישראל תמיר'
+    }
+  ];
 
 
   selectedCategory = this.categories[0]; // ברירת מחדל - קטגוריה ראשונה
@@ -121,7 +129,7 @@ reviews = [
     this.gallery.nativeElement.scrollTo({ left: 0, behavior: 'smooth' });
   }
 
-    onWindowScroll() {
+  onWindowScroll() {
     const scrolled = window.pageYOffset;
     const video = document.querySelector('.hero-bg-video') as HTMLElement;
     if (video) {
